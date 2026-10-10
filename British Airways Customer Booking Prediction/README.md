@@ -6,15 +6,17 @@ This project uses customer booking data to explore whether a customer is likely 
 
 ## What I did
 
-1. Explored and prepared a customer booking dataset with 50,000 records.
-2. Converted text categories into model-ready features.
-3. Trained a Random Forest model to predict `booking_complete`.
-4. Evaluated it with 5-fold cross-validation.
-5. Reviewed feature importance and summarised the findings in a slide.
+1. Explored the customer booking dataset and reviewed its columns and values.
+2. Prepared the data for machine learning, including converting text categories into model-ready values.
+3. Trained a Random Forest classification model to predict `booking_complete`.
+4. Evaluated the model using 5-fold cross-validation and several performance measures.
+5. Reviewed feature importance to see which inputs the model relied on most.
 
-## Cross-validation results
+## Results
 
-| Measure | Average result |
+The average cross-validation results were:
+
+| Measure | Result |
 |---|---:|
 | Accuracy | 85.2% |
 | Precision | 51.7% |
@@ -22,21 +24,33 @@ This project uses customer booking data to explore whether a customer is likely 
 | F1 score | 20.2% |
 | ROC-AUC | 77.7% |
 
-The data is imbalanced: about 15% of records are completed bookings. So, although accuracy is high, recall shows that the model identifies only about 13 out of every 100 customers who actually book. It would need improvement before it could be useful for targeting.
+Although accuracy was 85.2%, the model found only about 13 out of every 100 customers who completed a booking (recall). This means the model may miss many potential bookers, so it needs further improvement before being used for customer targeting.
 
-In this model run, route had the highest feature importance, followed by booking origin and purchase lead. Feature importance describes how much the model relied on a variable; it does not show that the variable causes a booking. Route has many distinct values, so its importance should be checked with additional methods.
+In this model run, route had the highest feature importance, followed by booking origin and purchase lead. Feature importance describes how much the model relied on an input; it does not show that the input causes a booking.
 
 ## Files
 
-- `booking_prediction.ipynb` — data preparation, model training, evaluation, and feature-importance chart.
-- `model_summary.pptx` — a one-slide summary of the findings.
-- `customer_booking.csv` — the dataset used for analysis; it is not included here. Obtain the permitted dataset separately and place it beside the notebook.
+- `British_airways.ipynb` — the detailed, guided notebook with data exploration, feature preparation, model evaluation, and feature-importance visualisation.
+- `booking_prediction.ipynb` — a second, streamlined version of the analysis.
+- `BA_Customer_Booking_Model_Summary.pptx` — a one-slide summary of the model and findings.
+- `customer_booking.csv` — the dataset used by the notebook (keep this out of the repository unless you have permission to share it).
 
 ## How to run
 
 1. Install Python and Jupyter Notebook.
-2. Install `pandas`, `numpy`, `scikit-learn`, and `matplotlib`.
-3. Place `customer_booking.csv` beside the notebook.
-4. Open `booking_prediction.ipynb` and run the cells from top to bottom.
+2. Install the packages used in the notebook, such as `pandas`, `scikit-learn`, `matplotlib`, and `seaborn`.
+3. Place the permitted dataset file beside the notebook, or update the notebook's data path.
+4. Open either notebook and run it from top to bottom.
 
-The results can vary if the data, preprocessing, model settings, or evaluation method changes. This is a learning project, not a production BA system.
+The exact results may vary if the data, preprocessing, train/test split, or model settings change.
+
+## Limitations and next steps
+
+- The low recall means the current model misses many customers who complete bookings.
+- Test a different prediction threshold and evaluate the precision/recall trade-off.
+- Compare feature importance with a method such as permutation importance, particularly because route has many distinct values.
+- If available and appropriate, explore additional customer-related information and validate the model on newer data.
+
+## Note
+
+This is a learning project based on the British Airways Data Science virtual experience. It is not an operational BA booking system or a production-ready model.
