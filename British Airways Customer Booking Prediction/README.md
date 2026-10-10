@@ -32,7 +32,7 @@ In this model run, route had the highest feature importance, followed by booking
 
 - `British_airways.ipynb` — the detailed, guided notebook with data exploration, feature preparation, model evaluation, and feature-importance visualisation.
 - `booking_prediction.ipynb` — a second, streamlined version of the analysis.
-- `BA_Customer_Booking_Model_Summary.pptx` — a one-slide summary of the model and findings.
+- `model_summary.pptx` — a one-slide summary of the model and findings.
 - `customer_booking.csv` — the dataset used by the notebook (keep this out of the repository unless you have permission to share it).
 
 ## How to run
