@@ -1,0 +1,8 @@
+# Keep the customer booking data out of the repository
+customer_booking.csv
+data/
+
+# Notebook and Python temporary files
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
