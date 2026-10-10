@@ -6,8 +6,8 @@ Hi, I’m Muhammad Musthafa, an MSc Data Science graduate building projects in d
 
 | Project | Summary | Tools |
 |---|---|---|
-| [British Airways Customer Booking Prediction](British Airways Customer Booking Prediction/) | Predicts whether a customer completes a booking; includes model evaluation and a one-slide summary. | Python, pandas, scikit-learn, Jupyter Notebook |
-| [Cricket Score Prediction](Cricket Score Prediction/) | Cricket score prediction project. | See project folder |
+| [British Airways Customer Booking Prediction](British%20Airways%20Customer%20Booking%20Prediction/) | Predicts whether a customer completes a booking; includes model evaluation and a one-slide summary. | Python, pandas, scikit-learn, Jupyter Notebook |
+| [Cricket Score Prediction](Cricket%20Score%20Prediction/) | Cricket score prediction project. | See project folder |
 
 ## About this portfolio
 
