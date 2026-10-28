@@ -6,3 +6,6 @@ data/
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
+
+# The taxi trips data is public, and the notebook needs it to run
+!/New York Taxi Trips Analysis/data/
